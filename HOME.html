@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="ABOUT.css">
+        <link rel="stylesheet" href="HOME.css">
+        <title>Special Agent: HOME</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    </head>
+    <ul>
+        <li id="logo"><a href="HOME.html"><img src= "special_agent_logo.png" alt="Special Agent Logo" width="383" height="200"></a></li>
+        <li><a href="THE TEAM.html"><h3>THE TEAM</h3></a></li>
+        <li><a href="ABOUT.html"><h3>ABOUT</h3></a></li>
+        <li><a href="GAME.html"><h3>GAME</h3></a></li>
+        <li><a href="STORY.html"><h3>STORY</h3></a></li>
+    </ul>
+    <body>
+    <h1><center>HOME</center></h1>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 4</div>
+          <img src="gunordone.png" style="width:100%">
+          <div class="text">Shoot or Die!</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 4</div>
+          <img src="pewpew.png" style="width:100%">
+          <div class="text">Bang Bang! They're dead!</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 4</div>
+          <img src="creatureapproaching.png" style="width:100%">
+          <div class="text">What's that? A zombie? Assassin?</div>
+        </div>
+        
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 4</div>
+            <img src="zombieattack.png" style="width:100%">
+            <div class="text">Uh oh!</div>
+          </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+          <span class="dot" onclick="currentSlide(4)"></span> 
+        </div>
+        
+        <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+    <p><center>Special Agent is a First-Person-Shooter (FPS) survival horror action adventure game. In this video game, you will become Special Agent [name redacted] to complete a series of spectacular, adventurous missions in order to expose the mastermind's behind-the-scene, ultimate conspiracy! You will become a hero to save this hopeless world! You know what you're up against? Zombies, assassins, traps, spies and the armed-to-the-teeth military that hunts you down! It's time to do something to change this world! Join us! Join this epic conquest!</center></p>
+    </body>
+</html>
